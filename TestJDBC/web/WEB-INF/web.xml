@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>DatabaseAccess</servlet-name>
+        <servlet-class>main.java.com.nexta.controller.WebSiteFindAll</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DatabaseAccess</servlet-name>
+        <url-pattern>/data</url-pattern>
+    </servlet-mapping>
+
+
+    <!--插入一条数据-->
+    <servlet>
+        <servlet-name>WebSiteInsertServlet</servlet-name>
+        <servlet-class>main.java.com.nexta.controller.WebSiteInsertServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WebSiteInsertServlet</servlet-name>
+        <url-pattern>/website/insert</url-pattern>
+    </servlet-mapping>
+
+    <!--查询一条数据-->
+    <servlet>
+        <servlet-name>WebSiteSearchById</servlet-name>
+        <servlet-class>main.java.com.nexta.controller.WebSiteSearchById</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebSiteSearchById</servlet-name>
+        <url-pattern>/website/search</url-pattern>
+    </servlet-mapping>
+
+    <!--根据id删除数据操作-->
+    <servlet>
+        <servlet-name>WebSiteDeleteById</servlet-name>
+        <servlet-class>main.java.com.nexta.controller.WebSiteDeleteById</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebSiteDeleteById</servlet-name>
+        <url-pattern>/website/delete</url-pattern>
+    </servlet-mapping>
+
+    <!--根据id更新website信息-->
+    <servlet>
+        <servlet-name>WebSiteUpdate</servlet-name>
+        <servlet-class>main.java.com.nexta.controller.WebSiteUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebSiteUpdate</servlet-name>
+        <url-pattern>/website/update</url-pattern>
+    </servlet-mapping>
+
+
+    <!--分页查询数据-->
+    <servlet>
+        <servlet-name>WebSitesSearchByFenYe</servlet-name>
+        <servlet-class>main.java.com.nexta.controller.WebSitesSearchByFenYe</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebSitesSearchByFenYe</servlet-name>
+        <url-pattern>/WebSitesSearchByFenYe</url-pattern>
+    </servlet-mapping>
+</web-app>
